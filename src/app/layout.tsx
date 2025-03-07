@@ -2,12 +2,18 @@ import './globals.css'
 
 import { Header } from '@/components/header'
 import type { Metadata } from 'next'
-import { Poppins } from 'next/font/google'
+import { Poppins, Shadows_Into_Light_Two } from 'next/font/google'
 
 const poppins = Poppins({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600', '700'],
   variable: '--font-poppins',
+})
+
+const shadowsIntoLight = Shadows_Into_Light_Two({
+  subsets: ['latin'],
+  weight: '400',
+  variable: '--font-shadow-into-light',
 })
 
 export const metadata: Metadata = {
@@ -21,10 +27,13 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${poppins.variable}`}>
-      <body className="antialiased h-dvh flex flex-col">
+    <html
+      lang="en"
+      className={`${poppins.variable} ${shadowsIntoLight.variable}`}
+    >
+      <body className="antialiased min-h-dvh flex flex-col">
         <Header />
-        <main className="flex-1 size-full px-6 py-4">{children}</main>
+        <main className="flex-1 size-full px-6 pt-4 pb-12">{children}</main>
       </body>
     </html>
   )

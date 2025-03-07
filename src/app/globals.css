@@ -79,6 +79,7 @@
   --color-sidebar-ring: var(--sidebar-ring);
 
   --font-sans: var(--font-poppins);
+  --font-handwrite: var(--font-shadow-into-light);
 }
 
 @layer base {
