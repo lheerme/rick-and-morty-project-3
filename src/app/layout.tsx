@@ -1,7 +1,8 @@
 import './globals.css'
 
+import { Header } from '@/components/header'
 import type { Metadata } from 'next'
-import { Poppins, Shadows_Into_Light_Two } from 'next/font/google'
+import { Poppins } from 'next/font/google'
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -21,7 +22,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${poppins.variable}`}>
-      <body>{children}</body>
+      <body className="antialiased h-dvh flex flex-col">
+        <Header />
+        <main className="flex-1 size-full">{children}</main>
+      </body>
     </html>
   )
 }
