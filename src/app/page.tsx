@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 export default async function Home() {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center md:justify-around m-auto h-full gap-4">
+    <div className="flex flex-col md:flex-row items-center justify-center md:justify-around m-auto w-full gap-4">
       <Image
         src={homeLogo}
         className="w-full max-w-[200px] md:max-w-xs h-auto"

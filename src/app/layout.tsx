@@ -33,7 +33,9 @@ export default function RootLayout({
     >
       <body className="antialiased min-h-dvh flex flex-col">
         <Header />
-        <main className="flex-1 size-full px-6 pt-4 pb-12">{children}</main>
+        <main className="flex flex-1 size-full px-6 pt-4 pb-12">
+          {children}
+        </main>
       </body>
     </html>
   )
