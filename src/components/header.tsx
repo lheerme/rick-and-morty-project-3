@@ -7,7 +7,7 @@ export function Header() {
 
   return (
     <header className="border-b-2">
-      <div className="max-w-7xl w-full m-auto flex items-center justify-between px-6 py-2">
+      <div className="max-w-7xl w-full m-auto flex items-center justify-between gap-2 px-6 py-2">
         <Link href="/" className="transition-all hover:drop-shadow-4xl">
           <Image
             src={logo}
