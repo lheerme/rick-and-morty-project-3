@@ -3,6 +3,7 @@ import './globals.css'
 import { Header } from '@/components/header'
 import type { Metadata } from 'next'
 import { Poppins, Shadows_Into_Light_Two } from 'next/font/google'
+import NextTopLoader from 'nextjs-toploader'
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -32,6 +33,7 @@ export default function RootLayout({
       className={`${poppins.variable} ${shadowsIntoLight.variable}`}
     >
       <body className="antialiased min-h-dvh flex flex-col">
+        <NextTopLoader color="#fac814" showSpinner={false} height={4} />
         <Header />
         <main className="flex flex-1 size-full px-6 pt-4 pb-12">
           {children}
