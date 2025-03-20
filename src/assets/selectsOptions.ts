@@ -65,7 +65,6 @@ export const locationsTypeOptions = [
   { value: 'dimension', label: 'Dimension' },
   { value: 'reality', label: 'Reality' },
   { value: 'death star', label: 'Death Star' },
-  { value: 'spacecraft', label: 'Spacecraft' },
   { value: 'base', label: 'Base' },
   { value: 'elemental rings', label: 'Elemental Rings' },
   { value: 'human', label: 'Human' },
@@ -94,7 +93,6 @@ export const dimensionsOptions = [
     value: `evil Rick's target dimension`,
     label: `Evil Rick's Target Dimension`,
   },
-  { value: 'eric stoltz mask', label: 'Eric Stoltz Mask Dimension' },
   {
     value: 'giant telepathic spiders',
     label: 'Giant Telepathic Spiders Dimension',
