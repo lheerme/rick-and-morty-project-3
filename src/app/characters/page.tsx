@@ -17,7 +17,7 @@ export default async function Characters({ searchParams }: CharactersProps) {
   const params = await searchParams
 
   return (
-    <div className="flex flex-col gap-4 w-full">
+    <div className="flex flex-col gap-8 w-full">
       <Image
         src={charactersLogo}
         className="max-w-md w-full mx-auto"

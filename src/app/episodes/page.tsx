@@ -14,7 +14,7 @@ export default async function Episodes({ searchParams }: EpisodesProps) {
   const params = await searchParams
 
   return (
-    <div className="flex flex-col gap-4 w-full">
+    <div className="flex flex-col gap-8 w-full">
       <Image
         src={episodesLogo}
         className="max-w-md w-full mx-auto"

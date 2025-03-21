@@ -16,7 +16,7 @@ export default async function Locations({ searchParams }: LocationsProps) {
   const params = await searchParams
 
   return (
-    <div className="flex flex-col gap-4 w-full">
+    <div className="flex flex-col gap-8 w-full">
       <Image
         src={locationsLogo}
         className="max-w-md w-full mx-auto"
