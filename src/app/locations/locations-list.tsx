@@ -40,7 +40,9 @@ export async function LocationsList({ params }: LocationsListProps) {
                 placeholder="blur"
               />
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/3 font-handwrite text-black text-center w-[97%]">
-                <p className="truncate text-xl px-3">{result.name}</p>
+                <p className="truncate text-lg sm:text-xl px-3">
+                  {result.name}
+                </p>
                 <p className="text-lg">{result.type}</p>
               </div>
             </Link>
