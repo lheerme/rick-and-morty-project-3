@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { twMerge } from 'tailwind-merge'
 import { CharacterEpisodesList } from './character-episodes-list'
 import { InformationNoteRoot } from './information-note'
+import { ReturnButton } from './return-button'
 
 interface CharacterDetailProps {
   params: Promise<{
@@ -42,7 +43,7 @@ export default async function CharacterDetail({
 
   return (
     <div className="mx-auto w-full max-w-7xl space-y-4">
-      {/* GO BACK BUTTON */}
+      <ReturnButton />
 
       <div className="flex flex-col md:flex-row items-center md:items-start justify-evenly gap-10 md:gap-6">
         <div className="relative w-full max-w-xs h-fit">
