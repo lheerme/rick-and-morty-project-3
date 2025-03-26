@@ -1,4 +1,5 @@
 import frame from '@/assets/img-frame.png'
+import { ReturnButton } from '@/components/return-button'
 import type { CharacterDetails } from '@/interfaces/character-details'
 import { ArrowRight } from 'lucide-react'
 import Image from 'next/image'
@@ -6,7 +7,6 @@ import Link from 'next/link'
 import { twMerge } from 'tailwind-merge'
 import { CharacterEpisodesList } from './character-episodes-list'
 import { InformationNoteRoot } from './information-note'
-import { ReturnButton } from './return-button'
 
 interface CharacterDetailProps {
   params: Promise<{
