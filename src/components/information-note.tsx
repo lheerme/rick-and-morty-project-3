@@ -3,11 +3,11 @@ import topPart from '@/assets/paper-top-part.png'
 import Image from 'next/image'
 import type { ReactNode } from 'react'
 
-interface InformationNoteRootProps {
+interface InformationNoteProps {
   children?: ReactNode
 }
 
-export function InformationNoteRoot({ children }: InformationNoteRootProps) {
+export function InformationNote({ children }: InformationNoteProps) {
   return (
     <div className="relative w-full max-w-sm">
       <Image

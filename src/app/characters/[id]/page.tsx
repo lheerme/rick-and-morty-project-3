@@ -1,4 +1,5 @@
 import frame from '@/assets/img-frame.png'
+import { InformationNote } from '@/components/information-note'
 import { ReturnButton } from '@/components/return-button'
 import type { CharacterDetails } from '@/interfaces/character-details'
 import { getEpisodesList } from '@/utils/get-episodes-list'
@@ -8,7 +9,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { twMerge } from 'tailwind-merge'
 import { CharacterEpisodesList } from './character-episodes-list'
-import { InformationNoteRoot } from './information-note'
 
 interface CharacterDetailProps {
   params: Promise<{
@@ -53,7 +53,10 @@ export default async function CharacterDetail({
           </h2>
         </div>
 
-        <InformationNoteRoot>
+        <InformationNote>
+          <h3 className="text-3xl text-center underline underline-offset-4 mb-6">
+            Information
+          </h3>
           <ul className="flex flex-col items-center gap-2 text-xl">
             <li>Name: {data.name}</li>
             <li>Gender: {data.gender}</li>
@@ -98,7 +101,7 @@ export default async function CharacterDetail({
               )}
             </li>
           </ul>
-        </InformationNoteRoot>
+        </InformationNote>
       </div>
 
       <div>
