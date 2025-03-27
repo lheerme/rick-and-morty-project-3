@@ -1,7 +1,12 @@
 import charactersLogo from '@/assets/characters-logo.png'
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import { CharacterList } from './character-list'
 import { CharacterListFilter } from './character-list-filter'
+
+export const metadata: Metadata = {
+  title: 'Characters | Rick And Morty Project',
+}
 
 interface CharactersProps {
   searchParams: Promise<{

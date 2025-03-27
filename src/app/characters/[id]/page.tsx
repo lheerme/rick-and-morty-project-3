@@ -5,10 +5,26 @@ import type { CharacterDetails } from '@/interfaces/character-details'
 import { getEpisodesList } from '@/utils/get-episodes-list'
 import { getId } from '@/utils/get-id'
 import { ArrowRight } from 'lucide-react'
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { twMerge } from 'tailwind-merge'
 import { CharacterEpisodesList } from './character-episodes-list'
+
+export async function generateMetadata({
+  params,
+}: { params: Promise<{ id: string }> }): Promise<Metadata> {
+  const { id } = await params
+
+  const response = await fetch(
+    `https://rickandmortyapi.com/api/character/${id}`
+  )
+  const data: CharacterDetails = await response.json()
+
+  return {
+    title: `${data.name} | Rick And Morty Project`,
+  }
+}
 
 interface CharacterDetailProps {
   params: Promise<{

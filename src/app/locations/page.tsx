@@ -1,7 +1,12 @@
 import locationsLogo from '@/assets/locations-logo.png'
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import { LocationsList } from './locations-list'
 import { LocationsListFilter } from './locations-list-filter'
+
+export const metadata: Metadata = {
+  title: 'Locations | Rick And Morty Project',
+}
 
 interface LocationsProps {
   searchParams: Promise<{

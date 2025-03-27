@@ -3,6 +3,12 @@ import { FilterInput } from '@/components/filter-input'
 import Image from 'next/image'
 import { EpisodesList } from './episodes-list'
 
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Episodes | Rick And Morty Project',
+}
+
 interface EpisodesProps {
   searchParams: Promise<{
     page?: string

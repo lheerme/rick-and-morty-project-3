@@ -2,7 +2,21 @@ import { InformationNote } from '@/components/information-note'
 import { ReturnButton } from '@/components/return-button'
 import type { EpisodeDetails } from '@/interfaces/episode-details'
 import { getEpisodesList } from '@/utils/get-episodes-list'
+import type { Metadata } from 'next'
 import { EpisodeCastList } from './episode-cast-list'
+
+export async function generateMetadata({
+  params,
+}: { params: Promise<{ id: string }> }): Promise<Metadata> {
+  const { id } = await params
+
+  const response = await fetch(`https://rickandmortyapi.com/api/episode/${id}`)
+  const data: EpisodeDetails = await response.json()
+
+  return {
+    title: `${data.name} | Rick And Morty Project`,
+  }
+}
 
 interface EpisodeDetailProps {
   params: Promise<{

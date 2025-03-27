@@ -2,7 +2,21 @@ import { InformationNote } from '@/components/information-note'
 import { ReturnButton } from '@/components/return-button'
 import type { LocationDetails } from '@/interfaces/location-details'
 import { getEpisodesList } from '@/utils/get-episodes-list'
+import type { Metadata } from 'next'
 import { LocationResidentsList } from './location-residents-list'
+
+export async function generateMetadata({
+  params,
+}: { params: Promise<{ id: string }> }): Promise<Metadata> {
+  const { id } = await params
+
+  const response = await fetch(`https://rickandmortyapi.com/api/location/${id}`)
+  const data: LocationDetails = await response.json()
+
+  return {
+    title: `${data.name} | Rick And Morty Project`,
+  }
+}
 
 interface LocationDetailProps {
   params: Promise<{
