@@ -1,6 +1,8 @@
 import frame from '@/assets/img-frame.png'
 import { ReturnButton } from '@/components/return-button'
 import type { CharacterDetails } from '@/interfaces/character-details'
+import { getEpisodesList } from '@/utils/get-episodes-list'
+import { getId } from '@/utils/get-id'
 import { ArrowRight } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -23,23 +25,6 @@ export default async function CharacterDetail({
     `https://rickandmortyapi.com/api/character/${id}`
   )
   const data: CharacterDetails = await response.json()
-
-  function getId(link: string) {
-    const linkArray = link.split('/')
-
-    return linkArray.slice(-1)[0]
-  }
-
-  function getEpisodesList(list: string[]) {
-    const idList = []
-
-    // biome-ignore lint/style/useConst: <explanation>
-    for (let id of list) {
-      idList.push(Number(getId(id)))
-    }
-
-    return idList
-  }
 
   return (
     <div className="mx-auto w-full max-w-7xl space-y-4">
