@@ -35,7 +35,6 @@ export function FilterInput({ className }: ComponentProps<'div'>) {
       params.delete('page')
 
       replace(`${pathname}?${params.toString()}`)
-      console.log(`${pathname}?${params.toString()}`)
     } else {
       params.delete('query')
 
