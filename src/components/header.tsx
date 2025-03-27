@@ -1,6 +1,7 @@
 import logo from '@/assets/header-logo.png'
 import Image from 'next/image'
 import Link from 'next/link'
+import { HeaderLink } from './header-link'
 
 export function Header() {
   const pathname = '/characters'
@@ -17,24 +18,9 @@ export function Header() {
           />
         </Link>
         <nav className="flex gap-4">
-          <Link
-            href="/characters"
-            className={`text-sm sm:text-base font-medium hover:opacity-75 transition-opacity ${pathname.startsWith('/characters') && 'text-primary'}`}
-          >
-            Characters
-          </Link>
-          <Link
-            href="/locations"
-            className={`text-sm sm:text-base font-medium hover:opacity-75 transition-opacity ${pathname.startsWith('/locations') && 'text-primary'}`}
-          >
-            Locations
-          </Link>
-          <Link
-            href="/episodes"
-            className={`text-sm sm:text-base font-medium hover:opacity-75 transition-opacity ${pathname.startsWith('/episodes') && 'text-primary'}`}
-          >
-            Episodes
-          </Link>
+          <HeaderLink href="/characters">Characters</HeaderLink>
+          <HeaderLink href="/locations">Locations</HeaderLink>
+          <HeaderLink href="/episodes">Episodes</HeaderLink>
         </nav>
       </div>
     </header>
