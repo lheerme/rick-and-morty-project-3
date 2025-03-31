@@ -1,34 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Rick And Morty Project
 
-## Getting Started
+![Rick and Morty Logo](./preview.png)
 
-First, run the development server:
+## Descrição
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+O Rick and Morty Project é um projeto de front-end que consome uma API para listar informações sobre os personagens, episódios e planetas da famosa série de TV "Rick and Morty". Este projeto foi desenvolvido com **Nextjs**, **Typescript**, **Tailwind CSS** e **shadcn/ui** para criar uma experiência de usuário interativa e dinâmica.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+[Link do Site](https://rick-and-morty-project-3.vercel.app)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-## Learn More
+## Funcionalidades
 
-To learn more about Next.js, take a look at the following resources:
+- **Personagens:** Visualize uma lista completa de todos os personagens da série, incluindo detalhes como nome, gênero, status, espécie, origem, tipo e localização.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Episódios:** Obtenha informações detalhadas sobre os episódios, incluindo título, data de lançamento e elenco.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Locais:** Obtenha informações sobre os locais que aparecem na série, incluindo nome, residentes e dimensão.
 
-## Deploy on Vercel
+## Como Executar
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Clone este repositório em sua máquina local.
+2. Instale as dependências usando o comando:
+   ```
+   npm install
+   ```
+3. Inicie o aplicativo com:
+   ```
+   npm run dev
+   ```
+4. Abra o aplicativo no seu navegador.
